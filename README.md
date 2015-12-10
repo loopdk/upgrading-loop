@@ -47,6 +47,8 @@ Finally, you should install some additional Loop modules to make the installatio
 drush pm-enable loop_content loop_dashboard loop_friend_notification loop_instruction loop_profession_optional
 ```
 
+Check out the notes on the [Loop saml](https://github.com/loopdk/profile/blob/release-v2.0.0/modules/loop_saml/README.md) module if it's installed.
+
 ## Cleaning up the menus
 
 Go to /admin/structure/menu/manage/menu-loop-primary-menu and remove any manually added links to “admin/content/abuse”.
