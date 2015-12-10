@@ -33,7 +33,6 @@ curl --silent https://raw.github.com/loopdk/upgrading-loop/master/loopdk.registr
 After sorting out the registry, you should be able to run
 
 ```
-drush cache-clear all
 drush updatedb
 ```
 
@@ -47,3 +46,7 @@ Finally, you should install some additional Loop modules to make the installatio
 ```
 drush pm-enable loop_content loop_dashboard loop_friend_notification loop_instruction loop_profession_optional
 ```
+
+## Cleaning up the menus
+
+Go to /admin/structure/menu/manage/menu-loop-primary-menu and remove any manually added links to “admin/content/abuse”.
