@@ -38,6 +38,43 @@ drush updatedb
 
 to finish upgrading the Loop installation.
 
+## Apply patches
+
+### Style Settings module
+
+```
+cd $(drush php-eval 'echo DRUPAL_ROOT')/$(drush pm-info --fields=path --format=csv style_settings)
+```
+
+[Value replacement clobbers CSS pseudo-class selectors in some situations](https://www.drupal.org/node/2648698)
+
+```
+curl --silent https://www.drupal.org/files/issues/style_settings-fix-clobbering-of-pseudo-classes-2648698-1-7.patch | patch --strip=1
+```
+
+### SAML Service Provider module
+
+```
+cd $(drush php-eval 'echo DRUPAL_ROOT')/$(drush pm-info --fields=path --format=csv saml_sp)
+```
+
+[Provide a way of knowing if the user has logged in via the SAML SP module](https://www.drupal.org/node/2649458)
+
+```
+curl --silent https://www.drupal.org/files/issues/2649458-saml_sp-is_user_authenticated_via_saml-2.patch | patch --strip=1
+```
+
+[EntityMetadataWrapperException: Unknown data property field_nameid](https://www.drupal.org/node/2572715)
+
+```
+curl --silent https://www.drupal.org/files/issues/nameid-correction.patch | patch --strip=1
+```
+
+[Validation of signed elements fails when namespaces are used](https://www.drupal.org/node/2649478)
+
+```
+curl --silent https://www.drupal.org/files/issues/2649478-saml_sp-validation_of_signed_elements_fails-2.patch | patch --strip=1
+```
 
 ## Installing additional Loop modules
 
