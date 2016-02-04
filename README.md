@@ -1,6 +1,6 @@
 # Upgrading an old Loop installation
 
-Loop release v2.4.0 has cleaned up the structure of the `loopdk`
+Loop release v1.2.0 has cleaned up the structure of the `loopdk`
 profile folder which makes it much easier to maintain new Loop
 installations and develop new modules.
 
@@ -19,13 +19,13 @@ You may be able to rebuild the registry using the Drush module
 [Registry Rebuild](https://www.drupal.org/project/registry_rebuild),
 but the easiest way to fix the registry is to load it from a clean
 Loop (v2.4.0) installation. A dump of the registry is available as
-[loopdk.registry.sql](https://raw.github.com/loopdk/upgrading-loop/master/loopdk.registry.sql).
+[loopdk.registry.sql](https://raw.github.com/os2loop/upgrading-loop/master/loopdk.registry.sql).
 
 To load this dump, jump into your Loop site directory (where
 settings.php sits) and run this command:
 
 ```
-curl --silent https://raw.github.com/loopdk/upgrading-loop/master/loopdk.registry.sql | drush sql-cli
+curl --location --silent https://raw.github.com/os2loop/upgrading-loop/master/loopdk.registry.sql | drush sql-cli
 ```
 
 ## Upgrading the site
@@ -84,7 +84,7 @@ Finally, you should install some additional Loop modules to make the installatio
 drush pm-enable loop_content loop_dashboard loop_friend_notification loop_instruction loop_profession_optional
 ```
 
-Check out the notes on the [Loop saml](https://github.com/loopdk/profile/blob/release-v2.0.0/modules/loop_saml/README.md) module if it's installed.
+Check out the notes on the [Loop saml](https://github.com/os2loop/profile/blob/release-v2.0.0/modules/loop_saml/README.md) module if it's installed.
 
 ## Cleaning up the menus
 
