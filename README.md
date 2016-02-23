@@ -18,7 +18,7 @@ profile.
 You may be able to rebuild the registry using the Drush module
 [Registry Rebuild](https://www.drupal.org/project/registry_rebuild),
 but the easiest way to fix the registry is to load it from a clean
-Loop (v2.4.0) installation. A dump of the registry is available as
+Loop (v1.2.0) installation. A dump of the registry is available as
 [loopdk.registry.sql](https://raw.github.com/os2loop/upgrading-loop/master/loopdk.registry.sql).
 
 To load this dump, jump into your Loop site directory (where
