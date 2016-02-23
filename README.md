@@ -84,7 +84,7 @@ Finally, you should install some additional Loop modules to make the installatio
 drush pm-enable loop_content loop_dashboard loop_friend_notification loop_instruction loop_profession_optional
 ```
 
-Check out the notes on the [Loop saml](https://github.com/os2loop/profile/blob/release-v2.0.0/modules/loop_saml/README.md) module if it's installed.
+Check out the notes on the [Loop saml](https://github.com/os2loop/profile/blob/master/modules/loop_saml/README.md) module if it's installed.
 
 ## Cleaning up the menus
 
