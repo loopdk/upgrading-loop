@@ -1,3 +1,10 @@
+# PROJECT OUTDATED
+
+This project have been archived as it no longer is active.
+
+-----
+
+
 # Upgrading an old Loop installation
 
 Loop release v1.2.0 has cleaned up the structure of the `loopdk`
